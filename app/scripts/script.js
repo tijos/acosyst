@@ -43,19 +43,7 @@ bbpApp.config(['$routeProvider', function($routeProvider) {
         controller: 'abonnementControl',
         controllerAs: 'abonnement'
       })
-     
-	  .when('/covoiturage', {
-	    templateUrl: 'views/covoiturage.php',
-	    controller: 'covoiturageControl',
-	    controllerAs: ' covoiturage'
-	  })
-	  
-	.when('/locationVente', {
-	    templateUrl: 'views/locationVente.php',
-	    controller: 'locationVenteControl',
-	    controllerAs: 'locationVente'
-	  })
-    
+        
 	  .when('/offresEmploi', {
 	    templateUrl: 'views/offresEmploi.php',
 	    controller: 'offresEmploiControl',
@@ -71,6 +59,19 @@ bbpApp.config(['$routeProvider', function($routeProvider) {
 	    controller: 'connexionControl',
 	    controllerAs: 'connexion'
 	  })
+	  
+	  .when('/apropos-acosyst', {
+        templateUrl: 'views/apropos.php',
+        controller: 'aproposControl',
+        controllerAs: 'apropos'
+      })
+      
+      .when('/nosclients', {
+        templateUrl: 'views/nosclients.php',
+        controller: 'nosclientsControl',
+        controllerAs: 'apropos'
+      })
+     
    .otherwise({
       redirectTo: '/'
    });
@@ -81,7 +82,7 @@ bbpApp.config(['$routeProvider', function($routeProvider) {
 
 bbpApp.controller("HomeCtrl", function ($scope)
   {
-   $scope.maVariable2="Hello World hihi !";
+   $scope.maVariable2="Hello World hihi  ha!";
   });
 
 bbpApp.controller("nousContacterControl", function ($scope)
@@ -105,22 +106,9 @@ bbpApp.controller("aideControl", function ($scope)
 
 bbpApp.controller("abonnementControl", function ($scope)
 {
-	  $scope.maVariable2="Je m'abonne aux alerte email !";
+	  $scope.maVariable2="Je m'abonne aux alertes email !";
  
 });
-
-bbpApp.controller("covoiturageControl", function ($scope)
-{
-	  $scope.maVariable2="covoiturage !";
- 
-});
-
-bbpApp.controller("locationVenteControl", function ($scope)
-{
-	  $scope.maVariable2="location vente !";
- 
-});
-
 
 bbpApp.controller("offresEmploiControl", function ($scope)
 {
@@ -139,6 +127,22 @@ bbpApp.controller("connexionControl", function ($scope)
 	  $scope.maVariable2="connexion !";
  
 });
+
+bbpApp.controller("aproposControl", function ($scope)
+{
+	  $scope.maVariable2="apropos !";
+ 
+});
+
+
+
+bbpApp.controller("nosclientsControl", function ($scope)
+{
+	  $scope.maVariable2="Nos clients !";
+ 
+});
+
+
 
 bbpApp.directive('slideable', function () {
     return {

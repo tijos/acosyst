@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-	<h1>Offres de covoiturage</h1>
+	<h1>Nos clients</h1>
 	
 	<p>{{ maVariable2 }}</p>
 </div>

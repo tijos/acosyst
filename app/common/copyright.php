@@ -1,7 +1,7 @@
 
 		
 	   
-			<div class="row" style="margin-bottom: 55px;">	
+			<div class="row" style="margin-bottom: 70px;">	
 				<div  class="col-lg-6 padding_spec">
 						
 						<div align="center">

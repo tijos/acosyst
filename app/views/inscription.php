@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-	<h1>Inscription</h1>
+	<h1>Inscription hh</h1>
 
 	<p>{{ maVariable2 }}</p>
 </div>

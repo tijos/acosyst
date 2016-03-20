@@ -31,20 +31,27 @@ bbpApp.controller("nosMetiersControl", function ($scope)
  
 });
 
-bbpAp.controller("HomeCtrl", function ($scope)
+bbpAp.controller("homeCtrl", function ($scope)
 {
-	  $scope.maVariable2="Nos metiers !";
+	  $scope.maVariable2="Home !";
  
 });
 
-bbpAp.controller("HomeCtrl", function ($scope)
-		  {
-		   $scope.maVariable2="Hello World hihi !";
-		  });
 
-		bbpApp.controller("monControl", function ($scope)
-		  {
-			$scope.maVariable="Hello World hihi !";
-		   
-		  });
+//bbpAp.controller("aproposCtrl", function ($scope)
+//{
+//	  $scope.maVariable2="apropos !";
+// 
+//});
+
+bbpAp.controller("HomeCtrl", function ($scope)
+  {
+   $scope.maVariable2="Hello World hihi !";
+  });
+
+bbpApp.controller("monControl", function ($scope)
+  {
+	$scope.maVariable="Hello World hihi !";
+   
+  });
 

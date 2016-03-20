@@ -15,7 +15,7 @@
 			
 			
 			<div class="entetedevise" style="float:right;padding:0 10px 0 10px;border-right:1px solid #cfcfcf;"> 	   							
-				<a href="#apropos">Apropos d'Acosyst</a>			
+				<a href="#apropos-acosyst">Apropos d'Acosyst</a>			
 			</div>
 			
 			<div class="entetedevise" style="float:right;padding:0 10px 0 10px;border-right:1px solid #cfcfcf;"> 	   							

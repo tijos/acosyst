@@ -27,6 +27,12 @@ bbpApp.config(['$routeProvider', function($routeProvider) {
         controller: 'nosMetiersControl',
         controllerAs: 'nosmetiers'
       })
+      
+//   .when('/apropos-acosyst', {
+//        templateUrl: 'views/apropos.php',
+//        controller: 'aproposControl',
+//        controllerAs: 'apropos'
+//      })
    
    .otherwise({
       redirectTo: '/'
