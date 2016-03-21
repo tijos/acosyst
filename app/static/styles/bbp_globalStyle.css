@@ -1,0 +1,251 @@
+body{
+	margin:auto;
+	width: 100%;
+}
+
+
+
+.footer{
+	margin-top:20px;
+	box-shadow: 0 1px 18px rgba(0, 0, 0, 0.2), 0 -2px 1px #fff;
+	background: #4c6172;
+	color:#fff;
+}
+
+.footer a{
+	color:#fff;
+}
+
+.entetelogo {
+	padding-bottom: 5px;
+}
+.region-header {
+	background: #fafafa none repeat scroll 0 0;
+	border-bottom:  1px solid #cfcfcf;
+	position: fixed;
+	width:100%;
+	z-index: 10;
+	margin-top: -1px;
+}
+
+.region-footer-bottom{
+	background-color: #419ce2;
+	bottom: 0;
+	height: 55px;
+	position: fixed;
+	width: 100%;
+	z-index: 10px;
+}
+
+.padding_spec{
+	margin-top: 15px; 
+	text-align: center;
+	text-transform:uppercase; 
+}
+
+
+.menuvert{
+	position:fixed; 
+	z-index:10;
+	cursor: pointer;
+	right: 0;
+	float:left;
+	width: 55px;
+	height:55px;
+	width: 240px;
+	margin-right:-186px;
+	-webkit-transition: all 2s; /* Safari */
+    transition: all 0.5s ease-in-out 0s;
+    border-bottom-left-radius:10px;
+	border-top-left-radius:10px;
+}
+.move{
+	margin-top: 45px;
+	-webkit-transition: all 2s; /* Safari */
+    transition: all 0.5s ease-in-out 0s;
+}
+.link_contact{
+	background:#5fabe6 url("../images/menuVert/picto_question.jpg") no-repeat scroll left bottom;
+}
+
+.link_common_2{
+	padding:14px 11px 11px 66px;;
+	font-weight: bold;
+	font-size: 16px;
+}
+.link_common_2 a{
+	color:white;
+}
+
+.link_common_1{
+	list-style-type: none !important;
+	width: 55px;
+	height:55px;
+	float:left;
+}
+
+#contact{ 
+    background: #2fa9b4; 
+	margin-top:262px; 
+}
+
+#contact:hover, #emploi:hover,#venteloc:hover,#covoiturage:hover,#abonnement:hover{
+   margin-right:0px;
+}
+
+.link-border{
+	border-bottom-left-radius:10px;
+	border-top-left-radius:10px;
+	border-right: 1px solid white ;
+}
+
+
+.link_emploi{
+	background:#cf2b4e url("../images/menuVert/picto_offre.jpg") no-repeat scroll left bottom;
+}
+
+#emploi{	 
+    background: #cf2b4e; 
+	margin-top:150px;
+}
+
+.link_venteloc{
+	background:#4c6172 url("../images/menuVert/hhh.png") no-repeat scroll left bottom;
+}
+
+
+.link_covoit{
+	background:#5fabe6 url("../images/autres/test2.png") no-repeat scroll left bottom;
+}
+
+
+
+.link_abon{
+	background:#5fabe6 url("../images/menuVert/envelopp.png") no-repeat scroll left bottom;
+}
+
+
+#abonnement{
+	background:#419ce2;/*#cf2b4e;*/
+	margin-top:206px;
+}
+
+.caroussel{
+	height: 250px;margin-top: 150px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+     width: 70%;
+     margin: auto;
+ }
+ 
+.h4 {
+   /* background-color: #008080;
+    
+   
+                       
+    font-family: Georgia;
+    padding: 5px;
+    height: 30px;
+   
+   */
+    font-weight:bold;
+	background-color:#157187;
+	color: white;
+    min-height: 35px;
+    height: auto;
+    padding-left: 10px;
+    padding-top: 7px;
+    text-align: left;
+    font-family: Georgia;
+    margin-top: 10px;
+}
+.commentcemarche{
+  background: #eee;	
+}
+.titre{
+	text-transform: uppercase;
+	margin-top: 15px;
+	font-family: Lucida Handwriting;
+	font-weight: bold;
+	padding: 10px;
+	font-size: 15px;
+}
+
+.covoiturage,.locavente,.emploi{
+	text-align: left;
+	font-size: 16px;
+	width: 20%;
+}
+
+
+.blocfootercolor{
+	color: #008080;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.well{
+	overflow: hidden;
+}
+
+    .animate-enter, 
+    .animate-leave
+    { 
+        -webkit-transition: 4000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+        -moz-transition: 4000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+        -ms-transition: 4000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+        -o-transition: 4000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+        transition: 4000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    } 
+     
+    .animate-enter {
+        top: 100%;
+    }
+    .animate-enter.animate-enter-active {
+        top: 0;
+    }
+     
+    .animate-leave {
+        top: 0;
+    }
+    .animate-leave.animate-leave-active{
+        top: -100%;
+    }
+
+@media (max-width: 768px) {
+  .entetedevise {
+	font-size: 12px;
+	margin-top: 31px;
+	font-weight: bold;
+  }
+}
+@media (min-width: 768px) {
+  .entetedevise {
+	font-size: 12px;
+	margin-top: 31px;
+	font-weight: bold;
+  }
+}
+@media (min-width: 992px) {
+   .entetedevise {
+	font-size: 15px;
+	margin-top: 31px;
+	font-weight: bold;
+  }
+}
+@media (min-width: 1200px) {
+  .entetedevise {
+	font-size: 16px;
+	margin-top: 31px;
+	font-weight: bold;
+  }
+}
+
+
+
+.test{
+	  display: none;
+}
+
