@@ -31,10 +31,12 @@ body{
 .region-footer-bottom{
 	background-color: #419ce2;
 	bottom: 0;
-	height: 55px;
+	height: 75px;
 	position: fixed;
 	width: 100%;
 	z-index: 10px;
+	color :white;
+	padding:12px;
 }
 
 .padding_spec{
