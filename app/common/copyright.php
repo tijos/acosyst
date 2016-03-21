@@ -44,7 +44,7 @@
 			
 			<div class="row">
 			   <div class="region-footer-bottom"> 
-				   	Slide actualité
+				   	Slide actualité XXX
 				</div>
 			</div>
 			
