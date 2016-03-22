@@ -155,11 +155,6 @@ input,textarea{
 	width: 450px;
 	margin-top: 5px;
 }
-
-input {
-    height: 30px;
-}
-
 .h4 {
    /* background-color: #008080;
     
@@ -268,3 +263,4 @@ input {
 .test{
 	  display: none;
 }
+

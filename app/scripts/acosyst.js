@@ -14,9 +14,14 @@ $(document).ready(function(){
     }
   }); 
   
-  $("#comment").click(function(){
-	    $("#commentBody").toggle(1000);
+  $(".entetedevise,.menuvert").click(function(){
+	   // $("#commentBody").toggle(1000);
+	  $("body, html").animate({scrollTop: 385}, "slow");	
 	});
+  
+//  ​$(".entetedevise").click(function() {
+//		$("body, html").animate({scrollTop: 500}, "slow");			
+//	});
 });
 
 
