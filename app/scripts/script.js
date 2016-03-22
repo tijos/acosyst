@@ -36,10 +36,10 @@ bbpApp.config(['$routeProvider', function($routeProvider) {
         controllerAs: 'nosmetiers'
       })
      
-    .when('/aide', {
-        templateUrl: 'views/aide.php',
-        controller: 'aideControl',
-        controllerAs: 'aide'
+    .when('/contact', {
+        templateUrl: 'views/contact.php',
+        controller: 'contactControl',
+        controllerAs: 'contact'
       })
     .when('/abonnement', {
         templateUrl: 'views/abonnement.php',
@@ -100,7 +100,7 @@ bbpApp.controller("nosMetiersControl", function ($scope)
  
 });
 
-bbpApp.controller("aideControl", function ($scope)
+bbpApp.controller("contactControl", function ($scope)
 {
 	  $scope.maVariable2="J'ai une question !";
  

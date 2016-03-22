@@ -21,7 +21,7 @@
 		 				 		
 		 	<div class="menuvert" id="contact">
 			    <div class="link_contact link-border link_common_1"></div>
-		 	    <div class="link_common_2"><a href="#aide">J'ai une question</a></div>        
+		 	    <div class="link_common_2"><a href="#nouscontacter">J'ai une question</a></div>        
 		 	</div>	
 			
 			
