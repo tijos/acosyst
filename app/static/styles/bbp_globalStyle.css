@@ -144,10 +144,9 @@ body{
  
  label {
     clear: left;
-    display: block;
-    float: left;
-    font-size: 14px;
-    margin: 7px 20px 0 0;
+    display: binline-flexock;
+    font-size: 18px;
+    margin: 7px 10px 10px; 
     text-align: right;
     width: 178px;
 }
@@ -156,6 +155,11 @@ input,textarea{
 	width: 450px;
 	margin-top: 5px;
 }
+
+input {
+    height: 30px;
+}
+
 .h4 {
    /* background-color: #008080;
     
@@ -264,4 +268,3 @@ input,textarea{
 .test{
 	  display: none;
 }
-
