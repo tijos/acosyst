@@ -2,7 +2,10 @@
 
 var bbpApp = angular.module('bbpApp', ['ngAnimate',
 //'ngCookies','ngResource',
-                                     'ngRoute'
+                                     'ngRoute',
+                                     'ngMaterial', 
+                                     'ngMessages' 
+                                   //  'material.svgAssetsCache'
                                     // 'ngSanitize','ngTouch'
                                    ]);
 
@@ -144,6 +147,131 @@ bbpApp.controller("nosclientsControl", function ($scope)
 
 
 
+(function () {
+  'use strict';
+  
+  bbpApp.controller('DemoCtrl', DemoCtrl);
+  function DemoCtrl ($timeout, $q) {
+    var self = this;
+    // list of `state` value/display objects
+    self.states        = loadAll();
+    self.selectedItem  = null;
+    self.searchText    = null;
+    self.querySearch   = querySearch;
+    // ******************************
+    // Internal methods
+    // ******************************
+    /**
+     * Search for states... use $timeout to simulate
+     * remote dataservice call.
+     */
+    function querySearch (query) {
+      var results = query ? self.states.filter( createFilterFor(query) ) : self.states;
+      var deferred = $q.defer();
+      $timeout(function () { deferred.resolve( results ); }, Math.random() * 1000, false);
+      return deferred.promise;
+    }
+    /**
+     * Build `states` list of key/value pairs
+     */
+    function loadAll() {
+      var allStates = 'Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware,\
+              Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana,\
+              Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana,\
+              Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina,\
+              North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina,\
+              South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia,\
+              Wisconsin, Wyoming';
+      return allStates.split(/, +/g).map( function (state) {
+        return {
+          value: state.toLowerCase(),
+          display: state
+        };
+      });
+    }
+    /**
+     * Create filter function for a query string
+     */
+    function createFilterFor(query) {
+      var lowercaseQuery = angular.lowercase(query);
+      return function filterFn(state) {
+        return (state.value.indexOf(lowercaseQuery) === 0);
+      };
+    }
+  }
+})();
+
+
+//angular.module('bbpApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
+bbpApp.controller('SelectAsyncController', function($timeout, $scope) {
+  $scope.user = null;
+  $scope.users = null;
+
+  $scope.loadUsers = function() {
+
+    // Use timeout to simulate a 650ms request.
+    return $timeout(function() {
+    /*	
+    	$http({
+    	    url: "https://fr.yahoo.com/",
+    	    method: "POST",
+    	    data: {"foo":"bar"}
+    	}).success(function(data, status, headers, config) {
+    	    $scope.data = data;
+    	}).error(function(data, status, headers, config) {
+    	    $scope.status = status;
+    	});
+    	
+   */
+    	
+    	
+   
+    	/*
+		$.ajax({
+			type: "POST",
+			url :"modules/global/controleur/connexion.php",
+			data:	'login=' + login + '&password=' + passe,
+			dataType: "json"
+			})
+			.done(function( data ) {
+				if(data != false){
+					if(data['sexe'] =='M'){
+						civilite = 'Mr';
+					}else{
+						civilite = 'Mme';
+					}
+					$("#form").html( "Bonjour ");
+					$("#deconnexion").html("Deconnexion");
+					$("#creation_annonce").html('<li style="border-right: 1px solid #232323;"><a style="text-decoration: none;color: white;" href="index.php?module=global&amp;action=enregistrementAnnonce">Postez votre annonce </a>	</li>');
+					location.reload(true);
+					
+				}else{
+					$.notify("Votre login ou mot de passe est incorrecte", "error");
+				}
+				
+			})
+		
+			.fail(function( data ) {
+				//$("#erreurconnexion").html( "Une erreur de connexion est survenue. Veuillez contacter votre administrateur");
+				$.notify("Une erreur de connexion.Votre mot de passe ou login est incorrecte", "error");
+			});
+	});
+	
+	*/
+      $scope.users =  $scope.users  || [
+        { id: 1, name: 'Scooby Doo' },
+        { id: 2, name: 'Shaggy Rodgers' },
+        { id: 3, name: 'Fred Jones' },
+        { id: 4, name: 'Daphne Blake' },
+        { id: 5, name: 'Velma Dinkley' }
+      ];
+
+    }, 650);
+  };
+});
+
+
+
 bbpApp.directive('slideable', function () {
     return {
         restrict:'C',
@@ -190,13 +318,36 @@ bbpApp.directive('slideToggle', function() {
 });
 
 
-
-
-
-
-
-bbpApp.directive('equalsTo', [function () {
 /*
+
+bbpApp.directive('myDirective', myDirective);
+
+		function myDirective() {           
+		  return {
+		   restrict: 'A',
+		   link: clicker
+		 }
+
+		function clicker() {
+			
+			var entetedevise = $('.entetedevise');
+			
+
+
+			$(entetedevise).bind('click', function() {
+				$("body, html").animate({scrollTop: 1000}, "slow");			
+			})
+
+//			$(contact).bind('click', function() {
+//				$("body, html").animate({scrollTop: 1000}, "slow");			
+//			})
+     }
+		}
+
+*/
+
+		bbpApp.directive('equalsTo', [function () {
+/*bbpApp
  * <input type="password" ng-model="Password" />
  * <input type="password" ng-model="ConfirmPassword" equals-to="Password" />
  */

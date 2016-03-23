@@ -51,7 +51,15 @@
 <!--      <script src="scripts/angular-route.min.js"></script> -->
     <script src="scripts/angular-route.js"></script>
   
-     <script src="scripts/bbp.js"></script> 
+  
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+	  <!-- Angular Material Library -->
+	 <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+	 
+     <script src="scripts/acosyst.js"></script> 
      
      <link rel="stylesheet" href="static/styles/bootstrap-3.3.6/css/bootstrap.min.css"> 
      <link rel="stylesheet" href="static/styles/bbp_globalStyle.css">	
