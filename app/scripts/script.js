@@ -202,7 +202,7 @@ bbpApp.controller("nosclientsControl", function ($scope)
 })();
 
 
-
+/*
 bbpApp.controller('myCtrl', function($scope, $http) {
   $http.get("ajax/objetContact.php")
   .then(function(response) {
@@ -212,7 +212,7 @@ bbpApp.controller('myCtrl', function($scope, $http) {
   });
 });
 
-
+*/
 
 //angular.module('bbpApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
 bbpApp.controller('SelectAsyncController', function($timeout, $scope) {
@@ -225,75 +225,7 @@ bbpApp.controller('SelectAsyncController', function($timeout, $scope) {
 
     // Use timeout to simulate a 650ms request.
     return $timeout(function() {
-    /*	
-    	$http({
-    	    url: "https://fr.yahoo.com/",
-    	    method: "POST",
-    	    data: {"foo":"bar"}
-    	}).success(function(data, status, headers, config) {
-    	    $scope.data = data;
-    	}).error(function(data, status, headers, config) {
-    	    $scope.status = status;
-    	});
-    	
-   */
-    	
-    /*	$http({
-    	    url: "http:app/ajax/objetContact.php",
-    	    method: "POST",
-    	    data: {"foo":"bar"}
-    	}).success(function(data, status, headers, config) {
-    	    $scope.data = data;
-    	}).error(function(data, status, headers, config) {
-    	    $scope.status = status;
-    	});
-    */	
    
-    /*	
-    	$http({
-    		  method: 'JSONP',
-    		  url: 'https://api.github.com/events?callback=JSON_CALLBACK'
-    		}).success(function(data, status, headers, config) {
-    		  // data contains the response
-    		  // status is the HTTP status
-    		  // headers is the header getter function
-    		  // config is the object that was used to create the HTTP request
-    		}).error(function(data, status, headers, config) {
-    		});
-    		
-    		*/
-    	/*
-		$.ajax({
-			type: "POST",
-			url :"modules/global/controleur/connexion.php",
-			data:	'login=' + login + '&password=' + passe,
-			dataType: "json"
-			})
-			.done(function( data ) {
-				if(data != false){
-					if(data['sexe'] =='M'){
-						civilite = 'Mr';
-					}else{
-						civilite = 'Mme';
-					}
-					$("#form").html( "Bonjour ");
-					$("#deconnexion").html("Deconnexion");
-					$("#creation_annonce").html('<li style="border-right: 1px solid #232323;"><a style="text-decoration: none;color: white;" href="index.php?module=global&amp;action=enregistrementAnnonce">Postez votre annonce </a>	</li>');
-					location.reload(true);
-					
-				}else{
-					$.notify("Votre login ou mot de passe est incorrecte", "error");
-				}
-				
-			})
-		
-			.fail(function( data ) {
-				//$("#erreurconnexion").html( "Une erreur de connexion est survenue. Veuillez contacter votre administrateur");
-				$.notify("Une erreur de connexion.Votre mot de passe ou login est incorrecte", "error");
-			});
-	});
-	
-	*/
       $scope.users =  $scope.users  || [
         { id: 1, name: 'Scooby Doo' },
         { id: 2, name: 'Shaggy Rodgers' },
@@ -306,6 +238,14 @@ bbpApp.controller('SelectAsyncController', function($timeout, $scope) {
   };
 });
 
+
+
+bbpApp.controller('customersCtrl', function($scope, $http) {
+    $http.get("ajax/objetContact.php").then(function(response) {
+        $scope.myData = response.data.records;
+        $scope.users = response.data.records;
+    });
+});
 
 
 bbpApp.directive('slideable', function () {
