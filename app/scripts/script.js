@@ -202,10 +202,24 @@ bbpApp.controller("nosclientsControl", function ($scope)
 })();
 
 
+
+bbpApp.controller('myCtrl', function($scope, $http) {
+  $http.get("ajax/objetContact.php")
+  .then(function(response) {
+      $scope.content = response.data;
+      $scope.statuscode = response.status;
+      $scope.statustext = response.statusText;            
+  });
+});
+
+
+
 //angular.module('bbpApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
 bbpApp.controller('SelectAsyncController', function($timeout, $scope) {
   $scope.user = null;
   $scope.users = null;
+  $scope.data = null;
+  
 
   $scope.loadUsers = function() {
 
@@ -224,8 +238,30 @@ bbpApp.controller('SelectAsyncController', function($timeout, $scope) {
     	
    */
     	
-    	
+    /*	$http({
+    	    url: "http:app/ajax/objetContact.php",
+    	    method: "POST",
+    	    data: {"foo":"bar"}
+    	}).success(function(data, status, headers, config) {
+    	    $scope.data = data;
+    	}).error(function(data, status, headers, config) {
+    	    $scope.status = status;
+    	});
+    */	
    
+    /*	
+    	$http({
+    		  method: 'JSONP',
+    		  url: 'https://api.github.com/events?callback=JSON_CALLBACK'
+    		}).success(function(data, status, headers, config) {
+    		  // data contains the response
+    		  // status is the HTTP status
+    		  // headers is the header getter function
+    		  // config is the object that was used to create the HTTP request
+    		}).error(function(data, status, headers, config) {
+    		});
+    		
+    		*/
     	/*
 		$.ajax({
 			type: "POST",
