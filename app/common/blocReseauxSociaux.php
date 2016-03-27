@@ -1,9 +1,9 @@
 
-<a target="_blank" href="https://www.facebook.com/pages/Burundi-Bons-Plans/466839080137023" title="" class="hint--top" data-hint="Suivez-nous sur facebook" target="blank" >
+<a target="_blank" href="https://www.facebook.com/Acosyst-601881709966370/" title="" class="hint--top" data-hint="Suivez-nous sur facebook" target="blank" >
 	<img alt="Suivez-nous sur facebook" src="static/images/reseaux/Facebook-Round.png" title="" width="30">
 </a>
 
-<a target="_blank" href="https://twitter.com/acosyst" title="" class="hint--top" data-hint="Suivez-nous sur twitter" class="hint--top" data-hint="Suivez-nous sur Twitter">
+<a target="_blank" href="https://twitter.com/acosystconseil" title="" class="hint--top" data-hint="Suivez-nous sur twitter" class="hint--top" data-hint="Suivez-nous sur Twitter">
 	<img alt="Suivez-nous sur twitter" src="static/images/reseaux/Twitter-round.png" width="30" title="">
 </a>
 
@@ -12,12 +12,12 @@
 <!-- </a> -->
 
 
-<a target="_blank" href="https://plus.google.com/102243446830612631338/posts?hl=fr" title="" class="hint--top" data-hint="Suivez-nous sur google plus">
+<a target="_blank" href="https://plus.google.com/u/0/113662181206723223923/posts?hl=fr" title="" class="hint--top" data-hint="Suivez-nous sur google plus">
 	<img alt="Suivez-nous sur google plus" src="static/images/reseaux/Google-plus-round.png" width="30" title="">
 </a>
 
 
-<a target="_blank" href="https://www.linkedin.com/profile/view?id=420522114&trk=nav_responsive_tab_profile_pic" title="" class="hint--top" data-hint="Suivez-nous sur linkedin">
+<a target="_blank" href="https://www.linkedin.com/in/acosyst-conseil-6831a6119?trk=nav_responsive_tab_profile_pic" title="" class="hint--top" data-hint="Suivez-nous sur linkedin">
 	<img alt="Suivez-nous sur linkedin"  title="" src="static/images/reseaux/Linkedin-round.png" width="30">
 </a>
 

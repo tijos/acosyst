@@ -9,6 +9,12 @@
     	<script src="scripts/jquery-1.11.0.min.js"></script>
     	<script src="scripts/bootstrap.min.js"></script>
 
+    	<script>
+    window.onload = function() {
+    	//$(".container").append( "<p>Heyo!</p>" );
+    }
+    
+</script>
 		  
 <!-- 		<script src="scripts/angular.min.js"></script> -->
 <!-- 		<script src="scripts/angular-animate.js"></script> -->
@@ -59,12 +65,13 @@
 
 	  <!-- Angular Material Library -->
 	 <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
-	 
+	 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.js"></script>
+  
      <script src="scripts/acosyst.js"></script> 
      
      <link rel="stylesheet" href="static/styles/bootstrap-3.3.6/css/bootstrap.min.css"> 
      <link rel="stylesheet" href="static/styles/bbp_globalStyle.css">	
-     <script src="scripts/script.js"></script>
+     <script src="scripts/controllers/controllers.js"></script>
 <!--      <script src="scripts/controllers/nosmetiers.js"></script>  -->
 <!--     <link rel="stylesheet" href="static/styles/style.css"> -->
    

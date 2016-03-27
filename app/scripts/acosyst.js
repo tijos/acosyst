@@ -2,7 +2,15 @@
  * 
  */
 
+
+
 $(document).ready(function(){
+//	
+//	$(window).load(function () {
+//		$(".container").html("loading...");
+//	});
+	
+	 
 	
   $(window).scroll(function() {
     if ($(document).scrollTop() < 20) {
@@ -19,8 +27,13 @@ $(document).ready(function(){
 	  $("body, html").animate({scrollTop: 385}, "slow");	
 	});
   
-//  ​$(".entetedevise").click(function() {
-//		$("body, html").animate({scrollTop: 500}, "slow");			
+  $(".accueil").click(function(){
+	   // $("#commentBody").toggle(1000);
+	  $("body, html").animate({scrollTop: 0}, "slow");	
+	});
+ 
+//  ​$(".accueil").click(function() {
+//		$("body, html").animate({scrollTop: 0}, "slow");			
 //	});
 });
 

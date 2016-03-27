@@ -1,21 +1,19 @@
 <div class="jumbotron text-center" style="background-color : white;">
-	<h3 class="urgence">Compl&eacute;t&eacute;z ce formulaire pour nous contacter</h3>
+	<h3 class="urgence urgenceCommon">Compl&eacute;t&eacute;z ce formulaire pour nous contacter</h3>
 	<form ng-submit="$event.preventDefault()"  name="contactForm">
 
 		<div ng-controller="DemoCtrl as ctrl" layout="column" ng-cloak>
 		  <md-content class="md-padding">
 		    
-		    <div ng-controller="customersCtrl" layout="column" layout-align="center center" ng-cloak>
+		    <div ng-controller="customersCtrl" ng-cloak>
 				 <div layout-gt-sm="row">
-				       <md-input-container class="margin_0"  flex>
-						  <div layout="column" layout-align="center center">
-						    <md-select required name="objet" placeholder="Objet de votre message" ng-model="user" md-on-open="loadUsers()" style="min-width: 200px;">
+				       <md-input-container class="margin_0">
+						    <md-select required name="objet" placeholder="Objet de votre message" ng-model="user" md-on-open="loadUsers()" style="min-width: 200px;font-size:20px;font-weight:bold;">
 						      <md-option ng-value="user" ng-repeat="user in users">{{user.Name}}</md-option>
 						    </md-select>
 						    <div ng-messages="contactForm.objet.$error">
 							    <div ng-messages-include="common/erreurs.html"></div>
 							</div>
-						  </div>
 						</md-input-container>
 					</div>
 			</div>

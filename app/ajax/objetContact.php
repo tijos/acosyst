@@ -1,79 +1,30 @@
 {
   "records": [
     {
-      "Name": "Alfreds Futterkiste",
-      "City": "Berlin",
-      "Country": "Germany"
+      "Name": "Cr\u00e9ation des sites Web"
     },
     {
-      "Name": "Ana Trujillo Emparedados y helados",
-      "City": "México D.F.",
-      "Country": "Mexico"
+      "Name": "Conseil en management"
     },
     {
-      "Name": "Antonio Moreno Taquería",
-      "City": "México D.F.",
-      "Country": "Mexico"
+      "Name": "Int\u00e9gration des syst\u00e8mes"
+
     },
     {
-      "Name": "Around the Horn",
-      "City": "London",
-      "Country": "UK"
+      "Name": "D\u00e9veloppement des logiciels"
+  
     },
     {
-      "Name": "B's Beverages",
-      "City": "London",
-      "Country": "UK"
+      "Name": "Offres d'emplois"
+
     },
     {
-      "Name": "Berglunds snabbköp",
-      "City": "Luleå",
-      "Country": "Sweden"
+      "Name": "Formation"
     },
     {
-      "Name": "Blauer See Delikatessen",
-      "City": "Mannheim",
-      "Country": "Germany"
-    },
-    {
-      "Name": "Blondel père et fils",
-      "City": "Strasbourg",
-      "Country": "France"
-    },
-    {
-      "Name": "Bólido Comidas preparadas",
-      "City": "Madrid",
-      "Country": "Spain"
-    },
-    {
-      "Name": "Bon app'",
-      "City": "Marseille",
-      "Country": "France"
-    },
-    {
-      "Name": "Bottom-Dollar Marketse",
-      "City": "Tsawassen",
-      "Country": "Canada"
-    },
-    {
-      "Name": "Cactus Comidas para llevar",
-      "City": "Buenos Aires",
-      "Country": "Argentina"
-    },
-    {
-      "Name": "Centro comercial Moctezuma",
-      "City": "México D.F.",
-      "Country": "Mexico"
-    },
-    {
-      "Name": "Chop-suey Chinese",
-      "City": "Bern",
-      "Country": "Switzerland"
-    },
-    {
-      "Name": "Comércio Mineiro",
-      "City": "São Paulo",
-      "Country": "Brazil"
+      "Name": "Autre"
+     
     }
+    
   ]
 }

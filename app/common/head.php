@@ -30,7 +30,7 @@
 				<a href="#nosmetiers">Nos metiers</a>			
 			</div>
 			
-			<div class="entetedevise" style="float:right;padding:0 10px 0 10px;border-right:1px solid #cfcfcf;"> 	   							
+			<div class="accueil" style="float:right;padding:0 10px 0 10px;border-right:1px solid #cfcfcf;"> 	   							
 				<a href="#/">Accueil</a>			
 			</div>
 
