@@ -25,7 +25,7 @@ body{
 	border-bottom:  1px solid #cfcfcf;
 	position: fixed;
 	width:100%;
-	z-index: 10;
+	z-index: 100;
 	margin-top: -1px;
 }
 
@@ -38,6 +38,7 @@ body{
 	z-index: 10px;
 	color :white;
 	padding:12px;
+	z-index: 99;
 }
 
 .padding_spec{
@@ -49,7 +50,7 @@ body{
 
 .menuvert{
 	position:fixed; 
-	z-index:10;
+	z-index:100;
 	cursor: pointer;
 	right: 0;
 	float:left;
@@ -294,4 +295,23 @@ md-input-container.md-default-theme label, md-input-container label, md-input-co
     padding:5px 10px 5px 15px;
     font-weight: bold;
     padding: 10px 10px 25px 0px;
+}
+
+.carousel-control.left {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+}
+.carousel-control.right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+    left: auto;
+    right: 0;
+}
+
+.carousel-caption{
+	color:black;
+}
+
+.jumbotron{
+	margin-top: 120px;
 }

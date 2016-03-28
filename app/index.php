@@ -72,6 +72,13 @@
      <link rel="stylesheet" href="static/styles/bootstrap-3.3.6/css/bootstrap.min.css"> 
      <link rel="stylesheet" href="static/styles/bbp_globalStyle.css">	
      <script src="scripts/controllers/controllers.js"></script>
+     
+     <link rel="stylesheet" href="scripts/slider/css/reset.css" type="text/css"   charset="utf-8" />
+	 <link rel="stylesheet" href="scripts/slider/css/style.css" type="text/css" charset="utf-8" />
+	 <link rel="stylesheet" href="scripts/slider/css/fractionslider.css">
+<!--      <script src="scripts/slider/jquery.fractionslider.min.js" type="text/javascript"></script> -->
+     <script src="scripts/slider/jquery.fractionslider.js" type="text/javascript"></script>
+     
 <!--      <script src="scripts/controllers/nosmetiers.js"></script>  -->
 <!--     <link rel="stylesheet" href="static/styles/style.css"> -->
    

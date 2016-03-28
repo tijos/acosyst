@@ -6,13 +6,7 @@
 			   <div class="link_emploi link-border link_common_1"></div> 
 	 	 	   <div  class="link_common_2"><a href="#offresEmploi">Offres d'emplois</a> </div>
 	 	 	</div>			 	
-			 		
-			 
-			 <div class="menuvert" id="venteloc">
-			   <div class="link_venteloc link-border link_common_1"></div>
-		 	   <div  class="link_common_2"> <a href="#locationVente">Locations et Ventes </a></div>
-		 	</div>	
-		 		
+			 			
 		 	<div class="menuvert" id="abonnement">
 			   <div class="link_abon link-border link_common_1"></div>		 
 		 	   <div  class="link_common_2" style="font-size: 13px;"><a href="#abonnement">Je m'abonne aux alertes </a></div>
