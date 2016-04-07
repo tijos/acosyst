@@ -1,8 +1,8 @@
-<div class="jumbotron text-center" style="background-color : white;">
+<div class="jumbotron text-center" style="background-color : white;"  ng-controller="envoyerControl">
 	<h3 class="urgence urgenceCommon">Compl&eacute;t&eacute;z ce formulaire pour nous contacter</h3>
-	<form ng-submit="$event.preventDefault()"  name="contactForm">
-
-		<div ng-controller="DemoCtrl as ctrl" layout="column" ng-cloak>
+<!-- 	<form ng-submit="envoyer()"  name="contactForm"> -->
+    <form ng-submit="submit(contactForm)" name="contactForm" method="post" action="" class="form-horizontal" role="form">
+		<div  layout="column" ng-cloak>
 		  <md-content class="md-padding">
 		    
 		    <div ng-controller="customersCtrl" ng-cloak>
@@ -61,14 +61,14 @@
 		      <div layout-gt-sm="row"> 
 		        <md-input-container class="margin_0" flex>
 		          <label>Entreprise :</label>
-		          <input type="text"/>
+		          <input type="text" name="entreprise" ng-model="entreprise"/>
 		        </md-input-container>		        
 		      </div>
 		  
 		  <div layout-gt-sm="row"> 
 		        <md-input-container flex>
 		          <label>Votre m&eacute;ssage :</label>
-		          <textarea rows="" cols="" ng-model="msg"> </textarea>
+		          <textarea rows="" cols="" ng-model="msg" name="msg"> </textarea>
 		        </md-input-container>		        
 		      </div>
 		  
