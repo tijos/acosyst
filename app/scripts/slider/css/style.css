@@ -1,0 +1,86 @@
+/* body{
+	position:relative;
+	
+	font-family:Arial, Sans-Serif;
+	font-weight: 200;
+	-webkit-font-kerning: auto;
+	-webkit-font-smoothing: antialiased;
+} */
+
+/* SLIDER STYLES */
+	
+.slider-wrapper{
+	position:relative;
+	overflow:hidden;
+	
+	width:100%;
+	height:320px;
+	margin:150px auto;
+	
+	/* background:#1b1b1b; */
+	
+	border:1px solid #cfcfcf;
+	box-shadow:0 3px 5px #666;
+}
+
+.slider{
+	position:relative;
+	width:100%; 
+/*	height:400px; when responsive, comment this out */
+	margin:0 auto;
+	
+	/* background:#1b1b1b; */
+}
+
+@media only screen and (min-width: 1000px){
+	.slider{
+		width:1000px;
+	}
+}
+
+@media only screen and (min-width: 1440px){
+	.slider{
+		width:1440px;
+	}
+}
+
+/* ELEMENT STYLES */
+
+op{
+    position:absolute;
+	top:-200px; 
+	font-family: Georgia;
+	z-index:80;
+	padding:1% 3%;
+	font-weight:bold;
+	font-size:24px;
+	line-height:100%
+	color:#fff;
+	white-space: nowrap;
+	text-transform:uppercase; 
+}
+
+.claim{
+	line-height:100%;
+	color: #cf2b4e;
+	font-size: 30px;
+}	
+
+.teaser{
+	padding:0.5% 1.5%;
+	font-size:14px;
+	 line-height:100%
+}
+
+.small{
+   text-align:center;
+   color: white;
+   width:400px;
+   padding:10px;
+}
+
+.light-green{background:#95C542;}
+.green{background:#7CB761}
+.orange{background:#EF7D00}
+.turky{background:#2fa9b4}
+.white{background:#fff; color:#333}
