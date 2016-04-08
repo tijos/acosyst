@@ -1,24 +1,30 @@
+
+<script>
+
+alert("envpyer");
+
+</script>
 <?php 
 
+require_once '../librairies/class.phpmailer.php';
+require_once '../librairies/PHPMailerAutoload.php';
 
-require_once 'librairies/PHPMailerAutoload.php';
-
-if (isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['objet']) && isset($_POST['msg'])) {
+//f (isset($_POST['nom']) && isset($_POST['mail']) && isset($_POST['.objet']) && isset($_POST['msg'])) {
 
 	//check if any of the inputs are empty
-	if (empty($_POST['nom']) || empty($_POST['email']) || empty($_POST['objet']) || empty($_POST['msg'])) {
+	/*if (empty($_POST['nom']) || empty($_POST['mail']) || empty($_POST['.objet']) || empty($_POST['msg'])) {
 		$data = array('success' => false, 'message' => 'Please fill out the form completely.');
 		echo json_encode($data);
 		exit;
 	}
-
+*/
 	//create an instance of PHPMailer
 	$mail = new PHPMailer();
 
-	$mail->From = $_POST['email'];
+	$mail->From = $_POST['mail'];
 	$mail->FromName = $_POST['nom'];
 	$mail->AddAddress('tijoscarlos@gmail.com'); //recipient
-	$mail->Subject = $_POST['objet'];
+	$mail->Subject = $_POST['prenom'];
 	$mail->Body = "Name: " . $_POST['nom'] . "\r\n\r\nMessage: " . stripslashes($_POST['msg']);
 
 	if (isset($_POST['ref'])) {
@@ -34,14 +40,14 @@ if (isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['objet']) && 
 	$data = array('success' => true, 'message' => 'Thanks! We have received your message.');
 	echo json_encode($data);
 
-} else {
+/*} else {
 
 	$data = array('success' => false, 'message' => 'Please fill out the form completely.');
 	echo json_encode($data);
 
 }
 
-
+*/
 //if (isset ( $_POST ['nom'] )) {
 /*
 	$mail = new Mail ( array (

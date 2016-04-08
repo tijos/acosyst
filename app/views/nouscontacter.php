@@ -1,7 +1,7 @@
 <div class="jumbotron text-center" style="background-color : white;"  ng-controller="envoyerControl">
 	<h3 class="urgence urgenceCommon">Compl&eacute;t&eacute;z ce formulaire pour nous contacter</h3>
 <!-- 	<form ng-submit="envoyer()"  name="contactForm"> -->
-    <form ng-submit="submit(contactForm)" name="contactForm" method="post" action="" class="form-horizontal" role="form">
+    <form ng-submit="" name="contactForm" method="post" action="ajax/envoyer.php" class="form-horizontal" role="form">
 		<div  layout="column" ng-cloak>
 		  <md-content class="md-padding">
 		    

@@ -180,6 +180,7 @@ bbpApp.controller("envoyerControl", function ($scope, $http) {
         $scope.submitted = true;
         $scope.submitButtonDisabled = true;
        // if (contactForm.$valid) {
+        alert($.param($scope.formData));
             $http({
                 method  : 'POST',
                 url     : 'ajax/envoyer.php',
@@ -187,6 +188,7 @@ bbpApp.controller("envoyerControl", function ($scope, $http) {
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  //set the headers so angular passing info as form data (not request payload)
             }).success(function(data){
                 console.log(data);
+                alert("1 succes");
                 if (data.success) { //success comes from the return json object
                     $scope.submitButtonDisabled = true;
                     $scope.resultMessage = data.message;
