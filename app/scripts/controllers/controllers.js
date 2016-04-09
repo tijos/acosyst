@@ -106,18 +106,75 @@ bbpApp.controller("contactControl", function ($scope)
  
 });
 
-
+/*
 bbpApp.controller("abonnementControl", function ($scope)
 {
 	  $scope.maVariable2="Je m'abonne aux alertes email !";
  
 });
 
+*/
+
+bbpApp.controller("abonnementControl", ['$scope', '$http', function($scope, $http) {
+    $scope.success = false;
+    $scope.error = false;
+
+    $scope.sendMessage = function( input ) {
+      input.submit = true;
+      $http({
+          method: 'POST',
+          url: 'modele/abonnement.php',
+          data: angular.element.param(input),
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      })
+      .success( function(data) {
+    	 
+        if ( data==23000 ) {
+        	 $scope.error = true;
+        	 $scope.data = data;
+        	 $scope.msgRetour ="Votre email n' a pas ete enregistre";
+        } else {
+          $scope.success = true;
+          $scope.data = data;
+          $scope.msgRetour ='Votre email a ete enregistre';
+        }
+      } );
+    }
+  }]);
+
+
+
+/*
 bbpApp.controller("offresEmploiControl", function ($scope)
 {
 	  $scope.maVariable2="Offres emploi !";
  
 });
+
+*/
+
+bbpApp.controller("offresEmploiControl", ['$scope', '$http', function($scope, $http) {
+    $scope.success = false;
+    $scope.error = false;
+
+    $scope.sendMessage = function( input ) {
+      input.submit = true;
+      $http({
+          method: 'POST',
+          url: 'ajax/processForm.php',
+          data: angular.element.param(input),
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      })
+      .success( function(data) {
+        if ( data.success ) {
+          $scope.success = true;
+        } else {
+          $scope.error = true;
+        }
+      } );
+    }
+  }]);
+
 
 bbpApp.controller("inscriptionControl", function ($scope)
 {
@@ -150,24 +207,29 @@ bbpApp.controller("nosclientsControl", function ($scope)
  
 });
 
+bbpApp.controller("envoyerControl", ['$scope', '$http', function($scope, $http) {
+    $scope.success = false;
+    $scope.error = false;
 
-//
+    $scope.sendMessage = function( input ) {
+      input.submit = true;
+      $http({
+          method: 'POST',
+          url: 'ajax/processForm.php',
+          data: angular.element.param(input),
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      })
+      .success( function(data) {
+        if ( data.success ) {
+          $scope.success = true;
+        } else {
+          $scope.error = true;
+        }
+      } );
+    }
+  }]);
+
 /*
-bbpApp.controller("envoyerControl", function ($scope)
-{
-	  $scope.envoyer = function(){
-		  
-		  $http.get("ajax/envoyer.php").then(function(response) {
-		        $scope.myData = response.data;
-		      
-		    });
-	  
-	  }
- 
-});
-
-*/
-
 bbpApp.controller("envoyerControl", function ($scope, $http) {
 	
 	
@@ -201,7 +263,7 @@ bbpApp.controller("envoyerControl", function ($scope, $http) {
                     alert("not succes");
                 }
             });
-            
+      */      
       /*  } else {
             $scope.submitButtonDisabled = false;
             $scope.resultMessage = 'Failed <img src="http://www.chaosm.net/blog/wp-includes/images/smilies/icon_sad.gif" alt=":(" class="wp-smiley">  Please fill out all the fields.';
@@ -209,8 +271,8 @@ bbpApp.controller("envoyerControl", function ($scope, $http) {
             alert("not valid");
         }
         */
-    }
-});
+//    }
+//});
 
 (function () {
   'use strict';

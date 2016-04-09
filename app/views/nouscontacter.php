@@ -1,7 +1,7 @@
-<div class="jumbotron text-center" style="background-color : white;"  ng-controller="envoyerControl">
+<div class="jumbotron text-center" style="background-color : white;">
 	<h3 class="urgence urgenceCommon">Compl&eacute;t&eacute;z ce formulaire pour nous contacter</h3>
 <!-- 	<form ng-submit="envoyer()"  name="contactForm"> -->
-    <form ng-submit="" name="contactForm" method="post" action="ajax/envoyer.php" class="form-horizontal" role="form">
+    <form ng-submit="form.$valid && sendMessage(input)" novalidate name="contactForm" method="post" ng-controller="envoyerControl" class="form-horizontal" role="form">
 		<div  layout="column" ng-cloak>
 		  <md-content class="md-padding">
 		    
@@ -76,7 +76,7 @@
 		</div>
 
 <!--    		<input type="submit" name="envoyer" id="envoyerBouton" value="Envoyer " tabindex="2" class="btn btn-primary"> -->
-   		<button style="margin-top: 15px;" class="btn btn-primary">Envoyer</button>
+   		<button type="submit" style="margin-top: 15px;" class="btn btn-primary" value="Envoyer">Envoyer</button>
   	</form>
   		
 </div>

@@ -2,7 +2,7 @@
 	<?php include 'common/menuvert.php';?>
 	<div class="row test" id="topmenu">
 		<div style="width: 100%;float: left;z-index:15;position: fixed; margin-top: -1px;background:#fafafa none repeat scroll 0 0;border-bottom: 1px solid #cfcfcf;">
-			<img alt="Covoiturage" src="static/images/reseaux.png" >
+			<img alt="" src="static/images/reseaux.png" >
 		</div>
 	</div>
 
