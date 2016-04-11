@@ -5,6 +5,7 @@ var bbpApp = angular.module('bbpApp', ['ngAnimate',
                                      'ngRoute',
                                      'ngMaterial', 
                                      'ngMessages', 
+                                    // 'ngDialog',
                                    //  'material.svgAssetsCache'
                                      'ngSanitize'//,'ngTouch'
                                    ]);
@@ -88,11 +89,11 @@ bbpApp.controller("HomeCtrl", function ($scope)
    $scope.maVariable2="Hello World hihi  ha!";
   });
 
-bbpApp.controller("nousContacterControl", function ($scope)
-  {
-	$scope.maVariable="Hello World hihi !";
-   
-  });
+//bbpApp.controller("nousContacterControl", function ($scope)
+//  {
+//	$scope.maVariable="Hello World hihi !";
+//   
+//  });
 
 bbpApp.controller("nosMetiersControl", function ($scope)
 {
@@ -130,7 +131,6 @@ bbpApp.controller("abonnementControl", ['$scope', '$http', function($scope, $htt
       .success( function(data) {
     	 
         if ( data==23000 ) {
-        	alert(data);
         	 $scope.error = true;
         	 $scope.data = data;
         	 $scope.msgRetour ="Votre email n'a pas \u00e9t\u00e9 enregistr\u00e9 : Cet email est d\u00e9j\u00e0 enregistr\u00e9 par une autre personne.";
@@ -230,50 +230,35 @@ bbpApp.controller("envoyerControl", ['$scope', '$http', function($scope, $http) 
     }
   }]);
 
-/*
-bbpApp.controller("envoyerControl", function ($scope, $http) {
-	
-	
-    $scope.result = 'hidden'
-    $scope.resultMessage;
-    $scope.formData; //formData is an object holding the name, email, subject, and message
-    $scope.submitButtonDisabled = false;
-    $scope.submitted = false; //used so that form errors are shown only after the form has been submitted
-    $scope.submit = function(contactform) {
-        $scope.submitted = true;
-        $scope.submitButtonDisabled = true;
-       // if (contactForm.$valid) {
-        alert($.param($scope.formData));
-            $http({
-                method  : 'POST',
-                url     : 'ajax/envoyer.php',
-                data    : $.param($scope.formData),  //param method from jQuery
-                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  //set the headers so angular passing info as form data (not request payload)
-            }).success(function(data){
-                console.log(data);
-                alert("1 succes");
-                if (data.success) { //success comes from the return json object
-                    $scope.submitButtonDisabled = true;
-                    $scope.resultMessage = data.message;
-                    $scope.result='bg-success';
-                    alert("succes");
-                } else {
-                    $scope.submitButtonDisabled = false;
-                    $scope.resultMessage = data.message;
-                    $scope.result='bg-danger';
-                    alert("not succes");
-                }
-            });
-      */      
-      /*  } else {
-            $scope.submitButtonDisabled = false;
-            $scope.resultMessage = 'Failed <img src="http://www.chaosm.net/blog/wp-includes/images/smilies/icon_sad.gif" alt=":(" class="wp-smiley">  Please fill out all the fields.';
-            $scope.result='bg-danger';
-            alert("not valid");
+
+bbpApp.controller("nousContacterControl", ['$scope', '$http', function($scope, $http) {
+    $scope.success = false;
+    $scope.error = false;
+
+    $scope.sendMessage = function( input ) {
+      input.submit = true;
+      $http({
+          method: 'POST',
+          url: 'ajax/nousContacter.php',
+          data: angular.element.param(input),
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      })
+      .success( function(data) {
+    	 
+        if ( data=='OK' ) {
+        	 $scope.error = false;
+        	 $scope.data = data;
+        	 $scope.msgRetour ="Votre email a \u00e9t\u00e9 envoy\u00e9. Nous allons vous &eacutepondre d&egrave;s que possible.";
+        } else {
+          $scope.success = true;
+          $scope.data = data;
+          $scope.msgRetour ="Votre email n'a pas \u00e9t\u00e9 envoy\u00e9.veillez r&eacuteessayer plus tard";
+         // ngDialog.open({ template: 'templateId' });
         }
-        */
-//    }
-//});
+      } );
+    }
+  }]);
+
 
 (function () {
   'use strict';
@@ -330,17 +315,6 @@ bbpApp.controller("envoyerControl", function ($scope, $http) {
 })();
 
 
-/*
-bbpApp.controller('myCtrl', function($scope, $http) {
-  $http.get("ajax/objetContact.php")
-  .then(function(response) {
-      $scope.content = response.data;
-      $scope.statuscode = response.status;
-      $scope.statustext = response.statusText;            
-  });
-});
-
-*/
 
 //angular.module('bbpApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
 bbpApp.controller('SelectAsyncController', function($timeout, $scope) {

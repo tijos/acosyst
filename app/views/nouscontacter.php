@@ -1,82 +1,74 @@
-<div class="jumbotron text-center" style="background-color : white;">
-	<h3 class="urgence urgenceCommon">Compl&eacute;t&eacute;z ce formulaire pour nous contacter</h3>
-<!-- 	<form ng-submit="envoyer()"  name="contactForm"> -->
-    <form ng-submit="form.$valid && sendMessage(input)" novalidate name="contactForm" method="post" ng-controller="envoyerControl" class="form-horizontal" role="form">
-		<div  layout="column" ng-cloak>
-		  <md-content class="md-padding">
-		    
-		    <div ng-controller="customersCtrl" ng-cloak>
-				 <div layout-gt-sm="row">
-				       <md-input-container class="margin_0">
-						    <md-select required name="objet" placeholder="Objet de votre message" ng-model="user" md-on-open="loadUsers()" style="min-width: 200px;font-size:20px;font-weight:bold;">
-						      <md-option ng-value="user" ng-repeat="user in users">{{user.Name}}</md-option>
-						    </md-select>
-						    <div ng-messages="contactForm.objet.$error">
-							    <div ng-messages-include="common/erreurs.html"></div>
-							</div>
-						</md-input-container>
-					</div>
-			</div>
-		    
-			
-		      <div layout-gt-sm="row">
-		        <md-input-container class="margin_0"  flex>
-		          <label>Nom</label>
-		          <input type="text" required name ="nom" ng-model="nom"/> 
-		          <div ng-messages="contactForm.nom.$error">
-					    <div ng-messages-include="common/erreurs.html"></div>
-					</div>
-		        </md-input-container>
-			
-				<md-input-container class="margin_0" flex>
-		          <label>Pr&eacute;nom</label>
-		          <input type="text" required name="prenom" ng-model="prenom"/>
-		          <div ng-messages="contactForm.prenom.$error">
-					    <div ng-messages-include="common/erreurs.html"></div>
-					</div>
-		        </md-input-container>
-		     </div>  
-		     
-		   
-		      <div layout-gt-sm="row"> 
+<script type="text/ng-template" id="templateId">
+    <h1>Template heading</h1>
+    <p>Content goes here</p>
+</script>
+  	<form method="post" name="contactform" role="contactform" ng-controller="nousContacterControl" ng-submit="contactform.$valid && sendMessage(input)"  novalidate>
+         <md-content class="md-padding">           
+              <div layout-gt-sm="row">  
+              	   <md-input-container class="margin_0" flex>
+		                <label for="nom">Nom:</label>
+		                <input type="text" id="nom" name="nom" ng-model="input.nom" required>
+		                 <div ng-messages="contactform.nom.$error"> 
+ 					        <div ng-messages-include="common/erreurs.html"></div>
+ 					     </div>       
+			         </md-input-container>
+			         
+			         <md-input-container class="margin_0" flex>
+			         	 <label>Pr&eacute;nom</label>
+			          	 <input type="text" required name="prenom" ng-model="input.prenom"/>
+				          <div ng-messages="contactform.prenom.$error">
+						     <div ng-messages-include="common/erreurs.html"></div>
+						  </div>
+			        </md-input-container>
+		        </div>
+		        
+		     <div layout-gt-sm="row"> 
 		        <md-input-container class="margin_0" flex>
 		          <label>Email :</label>
-		          <input type="email" ng-model="email" name="mail" required />
-<!-- 		           <span ng-show="contactForm.mail.$error.email">Entrez un email valide.</span> -->
+		          <input type="email" ng-model="input.email" name="mail" required />
+
 		           
-		           <div ng-messages="contactForm.mail.$error">
+		           <div ng-messages="contactform.mail.$error">
 					    <div ng-messages-include="common/erreurs.html"></div>
 					</div>
 		        </md-input-container>		        
 		      
 		        <md-input-container class="margin_0" flex>
 		          <label>T&eacute;lephone :</label>
-		          <input type="tel" required name="tel" ng-model="tel"/>
-		          <div ng-messages="contactForm.tel.$error">
+		          <input type="tel" required name="tel" ng-model="input.tel"/>
+		          <div ng-messages="contactform.tel.$error">
 				    <div ng-messages-include="common/erreurs.html"></div>
 				</div>
 		        </md-input-container>		        
 		      </div>
 		      
-		      <div layout-gt-sm="row"> 
+		     <div layout-gt-sm="row"> 
 		        <md-input-container class="margin_0" flex>
 		          <label>Entreprise :</label>
-		          <input type="text" name="entreprise" ng-model="entreprise"/>
+		          <input type="text" name="entreprise" ng-model="input.entreprise"/>
 		        </md-input-container>		        
 		      </div>
 		  
-		  <div layout-gt-sm="row"> 
+		  	 <div layout-gt-sm="row"> 
 		        <md-input-container flex>
 		          <label>Votre m&eacute;ssage :</label>
-		          <textarea rows="" cols="" ng-model="msg" name="msg"> </textarea>
+		          <textarea rows="" cols="" ng-model="input.msg" name="msg"> </textarea>
 		        </md-input-container>		        
-		      </div>
-		  
-		  </md-content>
-		</div>
-
-<!--    		<input type="submit" name="envoyer" id="envoyerBouton" value="Envoyer " tabindex="2" class="btn btn-primary"> -->
-   		<button type="submit" style="margin-top: 15px;" class="btn btn-primary" value="Envoyer">Envoyer</button>
-  	</form>
+		      </div> 
+		      
+          </md-content>
+          
+           <br/>
+		   <button style="margin-top: 15px;" class="btn btn-primary" type="submit" name="submit" value="submit">Envoyer</button>
+           <br/>  <br/>  <br/>
+            
+		  <div  ng-if="data==23000" class="msgKo"> 
+			  <img alt="" src="static/images/autres/erreur.png"> {{msgRetour}}
+          </div>
+       
+       	   <div  ng-if="data==00000" class="msgOk"> 
+			   <img alt="" src="static/images/autres/ok2.png">  {{msgRetour}}
+          </div>
+     </form>   
   		
 </div>
