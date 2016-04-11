@@ -130,13 +130,14 @@ bbpApp.controller("abonnementControl", ['$scope', '$http', function($scope, $htt
       .success( function(data) {
     	 
         if ( data==23000 ) {
+        	alert(data);
         	 $scope.error = true;
         	 $scope.data = data;
-        	 $scope.msgRetour ="Votre email n' a pas ete enregistre";
+        	 $scope.msgRetour ="Votre email n'a pas \u00e9t\u00e9 enregistr\u00e9 : Cet email est d\u00e9j\u00e0 enregistr\u00e9 par une autre personne.";
         } else {
           $scope.success = true;
           $scope.data = data;
-          $scope.msgRetour ='Votre email a ete enregistre';
+          $scope.msgRetour ='Votre email a \u00e9t\u00e9 enregistr\u00e9.';
         }
       } );
     }

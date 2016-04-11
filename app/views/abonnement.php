@@ -1,56 +1,31 @@
-<!--div class="jumbotron text-center" style="background-color : white;"-->
-<!-- 	<h3 class="urgence urgenceCommon"> Indiquez votre email pour vous abonner aux alertes d'offres d'emplois</h3> -->
-<!-- 	<form ng-submit="$event.preventDefault()"  name="contactForm"> -->
-
-<!-- 		<div ng-controller="DemoCtrl as ctrl" layout="column" ng-cloak> -->
-<!-- 		  <md-content class="md-padding"> -->
-<!-- 		      <div layout-gt-sm="row">  -->
-<!-- 		        <md-input-container class="margin_0" flex> -->
-<!-- 		          <label>Email :</label> -->
-<!-- 		          <input type="email" ng-model="email" name="mail" required />		            -->
-<!-- 		           <div ng-messages="contactForm.mail.$error"> -->
-<!-- 					    <div ng-messages-include="common/erreurs.html"></div> -->
-<!-- 					</div> -->
-<!-- 		        </md-input-container>		         -->
-		        
-<!-- 		      </div> -->
-		      
-		     
-<!-- 		  </md-content> -->
-<!-- 		</div> -->
-   		<!--button style="margin-top: 15px;" class="btn btn-primary">Enregistrer</button-->
-<!--   	</form> -->
-  		
-<!-- </div> -->
-
-
-<div class="jumbotron text-center" style="background-color : white;">
-     <form method="post" name="form" role="form" ng-controller="abonnementControl" ng-submit="form.$valid && sendMessage(input)" novalidate>
-             
-            
-                <fieldset>
-                    
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" ng-model="input.email" required>
-                    </div>
-                    
-                    
-                </fieldset>
-                <button type="submit" name="submit" value="submit">Enregistrer</button>
-                
-                 data :  {{data}} <br/>
-			      success:  {{success}} <br/>
-			      erreur :{{error}} <br/>
-			      
-			     <div  ng-if="data"> 
-			       {{msgRetour}}
-            	</div>
-            	
-            
-            </form>
-       
-        
-     
+<br/><br/> <br/>
+<h3 class="titreSpec">Abonnement aux alertes d'offres d'emploi</h3>
+ <br/>
+<div class=" text-center" style="background-color : white;">
+     <form method="post" name="abonnementform" role="abonnementform" ng-controller="abonnementControl" ng-submit="abonnementform.$valid && sendMessage(input)"  novalidate>
+         <md-content class="md-padding">           
+              <div layout-gt-sm="row">  
+              	   <md-input-container class="margin_0" flex>
+		                <label for="email">Email:</label>
+		                <input type="email" id="email" name="email" ng-model="input.email" required>
+		                 <div ng-messages="abonnementform.email.$error"> 
+ 					        <div ng-messages-include="common/erreurs.html"></div>
+ 					     </div>       
+		          
+		                 <br/>
+				          <button style="margin-top: 15px;" class="btn btn-primary" type="submit" name="submit" value="submit">Enregistrer</button>
+				                <br/>  <br/>  <br/>
+				            
+						  <div  ng-if="data==23000" class="msgKo"> 
+							  <img alt="" src="static/images/autres/erreur.png"> {{msgRetour}}
+				          </div>
+				       
+				       	   <div  ng-if="data==00000" class="msgOk"> 
+							   <img alt="" src="static/images/autres/ok2.png">  {{msgRetour}}
+				          </div>
+			         </md-input-container>
+		        </div>
+          </md-content>
+     </form>   
  </div>
         

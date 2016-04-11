@@ -1,10 +1,12 @@
 <?php 
+ require_once '../librairies/DBFactory.class.php';
+ $db = DBFactory::getMysqlConnexionWithPDO ();
 
-
+/*
 try
 {
 	// On se connecte à MySQL
-	$bdd = new PDO('mysql:host=localhost;dbname=acosyst;charset=utf8', 'root', 'admin');
+	$bdd = new PDO('mysql:host=localhost;dbname=acosyst;charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
@@ -14,8 +16,10 @@ catch(Exception $e)
 
 // Si tout va bien, on peut continuer
 
+*/
+
 // On récupère tout le contenu de la table jeux_video
-$reponse = $bdd->query('SELECT * FROM contenu ORDER BY id');
+$reponse = $db->query('SELECT * FROM contenu ORDER BY id');
 
 // On affiche chaque entrée une à une
 while ($donnees = $reponse->fetch())

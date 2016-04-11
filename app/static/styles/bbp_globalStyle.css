@@ -184,6 +184,14 @@ input,textarea{
 	color: #d74274;
 }
 
+.titreSpec{
+	margin-top: 20px;
+	font-family: serif;
+	font-weight: bold;
+	padding: 10px;
+	font-size: 30px;
+	color: #23527c;
+}
 
 .jumbotron p{
 	margin-top: 15px;
@@ -201,6 +209,17 @@ input,textarea{
 	font-size: 18px;
 }
 
+
+.msgKo{
+	color:#cf2b4e;
+	font-size: 18px;
+}
+
+
+.msgOk{
+	color:#2fa9b4;
+	font-size: 18px;
+}
 .well{
 	overflow: hidden;
 }
